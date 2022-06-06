@@ -1,5 +1,5 @@
-const { collectionInfo1 } = require("../components/collectioninfo");
-const { Iterator } = require("../components/Iterator"); 
+const { collectionInfo1 } = require("../../components/collectioninfo");
+const { Iterator } = require("../../components/Iterator"); 
 
 /*
 1. To log every item in a collection of data.

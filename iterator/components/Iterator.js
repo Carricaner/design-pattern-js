@@ -18,6 +18,10 @@ class Iterator {
         }
         return null;
     }
+
+    getCurrent() {
+        return this.#collection[this.#currentPosition];
+    }
 }
 
 module.exports = { Iterator };

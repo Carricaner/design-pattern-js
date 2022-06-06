@@ -1,4 +1,4 @@
-const { collectionInfo1 } = require("../components/collectioninfo");
+const { collectionInfo1 } = require("../../components/collectioninfo");
 
 /*
 1. To log every item in a collection of data.
