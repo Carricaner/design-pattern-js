@@ -10,11 +10,26 @@ To check:
 */
 
 // Demo
-let checkApplicant = (applicantInfo) => {
+let validations = [
+    {
+        strategy: strategies.isValidName,
+        target: applicantInfo1.name
+    },
+    {
+        strategy: strategies.isValidAge,
+        target: applicantInfo1.age
+    },
+    {
+        strategy: strategies.isValidPhone,
+        target: applicantInfo1.phone
+    }
+];
+
+let checkApplicant = (validations) => {
     let validator = new Validator();
-    validator.add(strategies.isValidName, applicantInfo.name);
-    validator.add(strategies.isValidAge, applicantInfo.age);
-    validator.add(strategies.isValidPhone, applicantInfo.phone);
+    for (let i = 0; i < validations.length; i++) {
+        validator.add(validations[i].strategy, validations[i].target);
+    }
 
     let errorMsg = validator.start();
     if (errorMsg) {
@@ -22,7 +37,7 @@ let checkApplicant = (applicantInfo) => {
     }
 };
 
-console.log(checkApplicant(applicantInfo1));
+console.log(checkApplicant(validations));
 
 
 
