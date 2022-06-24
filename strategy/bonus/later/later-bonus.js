@@ -13,3 +13,6 @@ console.log(bonus4ALevel.getBonus());
 
 let bonus4CLevel = new Bonus(salary, Performance.C);
 console.log(bonus4CLevel.getBonus());
+
+let bonus4OtherLevel = new Bonus(salary, Performance.OTHER);
+console.log(bonus4OtherLevel.getBonus());

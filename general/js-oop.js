@@ -52,7 +52,7 @@ class Doctor extends Person {
     #profession
 
     constructor({ name, age } = {}) {
-        super(name, age);
+        super(name, age); // sth's wrong ...
         this.#profession = "Doctor"
     }
 
@@ -67,7 +67,7 @@ class Doctor extends Person {
 
 let mary = new Person({name: "Mary", age: 30});
 
-console.log(mary.name); // undefined
+console.log(mary.name); // Mary
 console.log(mary.age); // undefined
 console.log(mary.getName())
 console.log(mary.getAge())
